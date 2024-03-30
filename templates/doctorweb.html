@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+
+    <style>
+        * {
+            font-family: Arial;
+            margin: 2px;
+            padding: 10px;
+            text-align: center;
+            position: flex;
+            background-color: #E6E6FA;
+        }
+ 
+        h2 {
+            color: green;
+            padding: 2px;
+        }
+ 
+        body {
+            margin-top: 10%;
+        }
+
+        
+
+        input {
+            background-color: whitesmoke;
+            color: black;
+        }
+
+        button {
+            background-color: #080503;
+        }
+
+    </style>
+        
+</head>
+
+    <title>Online Medical Doctor</title>
+
+<body>
+
+    <h2>Digital plate-form for Medical Doctors </h2>
+    <p>Dear doctors, it's time for you to computarize your work and save time.</p>    
+
+    <form action="/signIn">
+        <!--username and password-->
+        <h4>Enter your login credentials</h4>
+
+        <div>
+            <label for="user">Username:</label>
+            <input type="email" name="username" id="user" equired> <br>
+            <label for="userpwd">Password:</label>
+            <input type="text" name="userpasswd" id="userpwd" 
+                   style="-webkit-text-security:circle" required>
+        </div>
+        <div>
+            <input type="submit" value="Login">
+            <input type="checkbox" name="remember" id="rmb">
+            <label for="rmb">Remember me</label>
+            <p class="forgotpsd"> <a href="#">Forgot Password?</a></p>
+        </div>   
+    </form>
+
+    <!-- a form for sign up -->
+
+    <form action="/signup">
+        <div>
+            <p>Not registered ?
+                <a href="#"></a>
+                <input type="submit" value="Sign Up">
+            </p> 
+            
+        </div>
+    </form>
+     
+</body>
+</html>

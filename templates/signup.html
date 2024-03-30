@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign up form</title>
+
+    <style>
+        * {
+            font-family: Arial;
+            margin: 2px;
+            padding: 10px;
+            text-align: center;
+            position: flex;
+        }
+ 
+        h2 {
+            color: green;
+            padding: 2px;
+        }
+ 
+        body {
+            margin-top: 10%;
+        }
+    </style>
+    
+
+</head>
+
+
+<body>
+    <h2>Digital plate-form for Medical Doctors </h2>
+    <p>Just fill in the form below and create your account.</p>
+    
+    <form action="/submit-signup" method="POST">
+        <div>
+            <label for="doc_fname">First name</label>
+            <input type="text" name="doc_fname" id="fname", placeholder="First Name" required>
+        
+            <label for="doc_lname"> Last name</label>
+            <input type="text" name="doc_lname" id="lname", placeholder="Last Name" required>
+        </div>
+
+        <div>
+            <label for="sex">Gender</label>
+            <select name="gender" id="sex">
+                <option value="female">Female</option>
+                <option value="male">Male</option>
+            </select>
+
+            <label for="dob">Date of birth</label>
+            <input type="date" name="birthday" id="dob" min = "1940-12-31">
+
+        </div>
+
+        <div>
+            <label for="email_addr"> Email address</label>
+            <input type="email" name="email" id="email_addr" required>
+
+            <label for="pass"> Password</label>
+            <input type="password" name="passwd" id="pass" 
+            style="-webkit-text-security:circle" required>
+
+            <!--<label for="pass-repeat"> repeat the password</label> 
+            <input type="password" name="passwd-repeat" id="pass-repeat" 
+                   style="-webkit-text-security:circle" required> -->
+            
+        </div>
+
+        <div>
+            <input type="submit"> 
+            <input type="reset">
+        </div>
+
+    </form>
+</body>
+</html>
