@@ -1,6 +1,7 @@
 from flask import Flask, render_template, request
 from doctor import Account
-
+from connection import create_schema, create_database, run_request
+from signUp import write_doctor_file
 # moi = Account('stachylle@yahoo.fr', '1234')
 # print(moi)
 
@@ -35,7 +36,19 @@ def submit():
 
 
         # display data from Python to html page
+        
+        # create a datbase for a doctor who is just registered on the site
+        create_database(create_schema(first, last))
+
+        # save doctor's information in doctor_file.csv
+        
+        write_doctor_file(first, last, gen, birth, em, pwd)
+        
+
+
     return render_template("submit-signup.html", f=first, l=last, g = gen, b = birth, e=em, p=pwd)
+
+
 
 if __name__=="__main__":
     app.run(debug=True)
