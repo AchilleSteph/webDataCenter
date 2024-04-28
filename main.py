@@ -23,18 +23,18 @@ def pageweb_preparation():
 def submit():
     if request.method == "POST":
         # collect data from user keyboard (html page)
-        first = request.form["doc_fname"]
-        last = request.form["doc_lname"]
+        first = request.form["doc_fname"].strip()
+        last = request.form["doc_lname"].strip()
         gen = request.form["gender"]
         birth = request.form["birthday"]
-        em = request.form["email"]
+        em = request.form["email"].strip()
 
         pwd = request.form["passwd"]
-        #pwd2 = request.form["passwd-repeat"]
+        #pwd2 = request.form["passwd-confirm"]
         #if pwd != pwd2: 
             #print("the second password is different form the first one. Try again !")
 
-
+        
         # display data from Python to html page
         
         # create a datbase for a doctor who is just registered on the site
@@ -46,7 +46,8 @@ def submit():
         
 
 
-    return render_template("submit-signup.html", f=first, l=last, g = gen, b = birth, e=em, p=pwd)
+    return render_template("submit-signup.html")
+    #retrun render_template("submit-signup.html", f=first, l=last, g = gen, b = birth, e=em, p=pwd)
 
 
 

@@ -3,13 +3,109 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script type="text/javascript" src="templates/scripts.js"></script>
     <title>Sign in </title>
-</head>
-<body>
 
-    <h3>
-        Create a file for your patient or make an update for a given patient.
-    </h3>
+    <style>
+        /*styles CSS for page partitionning */
+        body, html {
+            margin: 0;
+            padding: 0;
+            height: 100%;
+            font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+        }
+        .container {
+            display: flex;
+            flex-direction: column;
+            height: 100%;
+        }
+
+        header, footer {
+            background-color: cadetblue;
+            color: black;
+            padding: 20px;
+            text-align: center;
+        }
+
+        .main-content {
+            display: flex;
+            flex: 1;
+        }
+        
+        aside {
+            background-color: blueviolet;
+            color: #fff;
+            padding: 20px;
+            width: 200px;
+        }
+
+        .content {
+            flex: 1;
+            padding: 20px;
+        }
+
+        .input-container {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+
+    </style>
+</head>
+
+ <body>
+    <div class="container">
+        <!--- the header -->
+        <header>
+            <h1>En-tete </h1>
+        </header>
+
+        <!--- main content - body of the page-->
+        <div class="main-content">
+            <!-- menu on the left side-->
+            <aside>
+                <h2> Menu </h2>
+                <ul>
+                    <li><a href="#">Accueil</a></li>
+                    <li><a href="#">A propos</a></li>
+                    <li><a href="#">Services</a></li>
+                    <li><a href="#">Contact</a></li>
+                </ul>
+            </aside>
+
+            <!-- the space availble to work -->
+            <div class="content">
+                <h2>The main page</h2>
+                
+                <p> Create a file for your patient or make an update for a given patient.</p>
+
+                <div class="input-container">
+                    <input type="number" id="columns" min="1" placeholder="number of columns">
+                    <input type="number" id="rows" min="1" placeholder="Number of rows">
+                    <button onclick="createTable()"> Create Table </button>
+
+                </div>
+
+                
+
+                <table id="myTable">
+                    <!--Table will be dynamically generated-->
+                </table>
+
+                <!-- create the table -->
+              
+            </div>
+
+
+        </div>
+
+        <!-- The footer-->
+        <footer>
+            <p> Copy right 2024</p>
+        </footer>
+
+    </div>
     
+       
 </body>
 </html>

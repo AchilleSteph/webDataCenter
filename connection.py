@@ -3,7 +3,7 @@ import mysql.connector
 # create a schema
 def create_schema(first_name, last_name):
     schema = first_name + "_" + last_name
-    return schema
+    return schema.replace(" ", "_").upper()
 
 # function create database
 def create_database(schema):

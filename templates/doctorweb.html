@@ -23,9 +23,7 @@
  
         body {
             margin-top: 10%;
-        }
-
-        
+        }        
 
         input {
             background-color: whitesmoke;
@@ -65,6 +63,30 @@
             <p class="forgotpsd"> <a href="#">Forgot Password?</a></p>
         </div>   
     </form>
+
+    <!--
+        ---------------------------------------
+
+    <script type="text/javascript">
+        const form = document.querySelector("form");
+        form.addEventListener("submit", function(event) {
+            event.preventDefault(); /// prevent default form submisson behavior
+            
+            // validate username and password
+            const username = document.getElementById("user").value;
+            const password = document.getElementById("userpwd").value;
+
+            if (username === "myusername" && password === "mypassword") {
+                alert("Login Successful");
+            } else {
+                alert("usernameor passeword incorrect. Try again. ")
+            }
+
+        });
+
+    </script>
+---------------------------------------------------------
+    -->
 
     <!-- a form for sign up -->
 

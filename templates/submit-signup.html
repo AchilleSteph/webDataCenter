@@ -4,15 +4,55 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>sign up page</title>
-</head>
-<body>
+    <link rel="stylesheet" href="templates/styles.css">
 
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            font-family: sans-serif;
+        }
+
+        body {
+            background: linear-gradient(rgba(0,0,0,0.4)50%, rgba(0,0,0,0.4)50%), url(doctor.jpg);
+            background-position: center;
+            background-size: cover;
+            height: 100vh;
+        }
+
+        .container {
+            padding: 200px;
+            display: flex;
+            flex-direction: column;
+            height: 100%;
+            text-align: center;
+            line-height: 50px;
+        
+        }
+    </style>
+
+</head>
+<body class="container">
+
+    <!--
     <h3>{{f}}</h3>
     <h3>{{l}}</h3>
     <h3>{{g}}</h3>
     <h3>{{b}}</h3>
     <h3>{{e}}</h3>
-    <h3>{{p}}</h3>
+    <h3>{{p}}</h3>   -->
+
+    <p>Congratulations! Your account has been successfully registered. </p>
+
+    <p>Move to login page via the link below </p>
+
+    <p>
+        <a href="http://127.0.0.1:5000/">Sign In and start your session </a>
+    </p>
+
+    
+
+    
     
 </body>
 </html>
